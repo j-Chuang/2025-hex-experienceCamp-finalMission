@@ -1,0 +1,16 @@
+.search-bar {
+  border: 1px solid $hex-dark;
+  border-radius: 40px;
+  padding: 16px 48px 16px 16px;
+}
+
+.search-bar-icon {
+  margin-right: 10px;
+}
+
+.search-bar-input {
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+

@@ -1,0 +1,61 @@
+.fz-7 {
+  font-size: 52px;
+}
+@media (min-width: 992px) {
+  .fz-7 {
+    font-size: 120px;
+  }
+}
+
+.bg-img-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.line-clamp {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.badge {
+  background-color: $primary;
+  border-radius: 40px;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.card {
+  background-color: inherit;
+}
+
+.card-img-top {
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.pagination {
+  border-radius: 40px;
+  background: var(--#{$prefix}body-bg);
+  padding: 8px 20px;
+  .page-item {
+    width: 40px;
+  }
+  .page-link {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .page-item.page-arrow {
+    width: 24px;
+    & .page-link {
+      font-size: 24px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

@@ -68,6 +68,8 @@ $colors: (
   "white":      $white,
   "gray":       $gray-600,
   "gray-dark":  $gray-800,
+  "hex-blue": $hex-blue, //custom
+  "hex-gray": $hex-gray, //custom
   "hex-dark": $hex-dark, //custom
   "hex-white": $hex-white //custom
 ) !default;
@@ -312,6 +314,8 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$hex-dark:      $hex-dark; //custom
+$hex-white:      $hex-white; //custom
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -323,7 +327,9 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "hex-dark":   $hex-dark, //custom
+  "hex-white":   $hex-white, //custom
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -426,8 +432,9 @@ $spacers: (
   8: $spacer * 2, //custom
   9: $spacer * 2.25, //custom
   10: $spacer * 2.5, //custom
-  11: $spacer * 4, //custom
-  12: $spacer * 5, //custom
+  11: $spacer * 3, //custom
+  12: $spacer * 4, //custom
+  13: $spacer * 5, //custom
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -448,7 +455,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
+$body-color:                $black;//$gray-900 !default; //custom
 $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
@@ -659,7 +666,7 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1303,8 +1310,8 @@ $dropdown-dark-header-color:        $gray-500 !default;
 // Pagination
 
 // scss-docs-start pagination-variables
-$pagination-padding-y:              .375rem !default;
-$pagination-padding-x:              .75rem !default;
+$pagination-padding-y:              0;//.375rem !default; //custom
+$pagination-padding-x:              0;//.75rem !default; //custom
 $pagination-padding-y-sm:           .25rem !default;
 $pagination-padding-x-sm:           .5rem !default;
 $pagination-padding-y-lg:           .75rem !default;
@@ -1312,12 +1319,12 @@ $pagination-padding-x-lg:           1.5rem !default;
 
 $pagination-font-size:              $font-size-base !default;
 
-$pagination-color:                  var(--#{$prefix}link-color) !default;
+$pagination-color:                  $hex-dark;//var(--#{$prefix}link-color) !default; //custom
 $pagination-bg:                     var(--#{$prefix}body-bg) !default;
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
 $pagination-margin-start:           calc(-1 * #{$pagination-border-width}) !default; // stylelint-disable-line function-disallowed-list
-$pagination-border-color:           var(--#{$prefix}border-color) !default;
+$pagination-border-color:           none;//var(--#{$prefix}border-color) !default; //custom
 
 $pagination-focus-color:            var(--#{$prefix}link-hover-color) !default;
 $pagination-focus-bg:               var(--#{$prefix}secondary-bg) !default;
@@ -1328,8 +1335,8 @@ $pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
 $pagination-hover-bg:               var(--#{$prefix}tertiary-bg) !default;
 $pagination-hover-border-color:     var(--#{$prefix}border-color) !default; // Todo in v6: remove this?
 
-$pagination-active-color:           $component-active-color !default;
-$pagination-active-bg:              $component-active-bg !default;
+$pagination-active-color:           $primary;//$component-active-color !default; //custom
+$pagination-active-bg:              $pagination-bg;//$component-active-bg !default; //custom
 $pagination-active-border-color:    $component-active-bg !default;
 
 $pagination-disabled-color:         var(--#{$prefix}secondary-color) !default;
@@ -1360,9 +1367,9 @@ $card-title-color:                  null !default;
 $card-subtitle-color:               null !default;
 $card-border-width:                 var(--#{$prefix}border-width) !default;
 $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
-$card-border-radius:                var(--#{$prefix}border-radius) !default;
+$card-border-radius:                0px;//var(--#{$prefix}border-radius) !default; //custom
 $card-box-shadow:                   null !default;
-$card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
+$card-inner-border-radius:          0px;//subtract($card-border-radius, $card-border-width) !default; //custom
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       rgba(var(--#{$prefix}body-color-rgb), .03) !default;
@@ -1500,11 +1507,11 @@ $toast-header-border-color:         $toast-border-color !default;
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size:                   .75em !default;
+$badge-font-size:                   1rem;//.75em !default; //custom
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
-$badge-padding-y:                   .35em !default;
-$badge-padding-x:                   .65em !default;
+$badge-padding-y:                   6px;//.35em !default; //custom
+$badge-padding-x:                   12px;//.65em !default; //custom
 $badge-border-radius:               var(--#{$prefix}border-radius) !default;
 // scss-docs-end badge-variables
 

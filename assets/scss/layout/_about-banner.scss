@@ -1,0 +1,16 @@
+.about-banner {
+  border-top: 1px solid $secondary;
+  border-bottom: 1px solid $secondary;
+}
+
+.about-banner-photo {
+  background-image: url(/assets/images/mobile/blog/about-section.png);
+  height: 375px;
+}
+
+@include media-breakpoint-up(lg) {
+  .about-banner-photo {
+    background-image: url(/assets/images/desktop/blog/about-section.png);
+    height: 640px;
+  }
+}

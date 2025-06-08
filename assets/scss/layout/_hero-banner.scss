@@ -1,0 +1,17 @@
+.hero-banner-photo {
+  background-image: url(/assets/images/mobile/index/Hero-Section.png);
+  height: calc(100vh - 90px - 180px);
+}
+.hero-banner-intro {
+  background-image: url(/assets/images/mobile/index/Hero-Section2.png);
+}
+
+@include media-breakpoint-up(lg) {
+  .hero-banner-photo {
+    background-image: url(/assets/images/desktop/index/Hero-Section.png);
+    height: calc(100vh - 90px);
+  }
+  .hero-banner-intro {
+    background-image: url(/assets/images/desktop/index/Hero-Section2.png);
+  }
+}
