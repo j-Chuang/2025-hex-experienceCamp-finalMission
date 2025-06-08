@@ -4,8 +4,7 @@
   padding: 8px 16px;
   color: $hex-dark;
   &:hover {
-  border: 1px solid #000;
-  background-color: $hex-dark;  
-  color: $hex-white;
+  border: 1px solid $primary;
+  color: $primary;
   }
 }

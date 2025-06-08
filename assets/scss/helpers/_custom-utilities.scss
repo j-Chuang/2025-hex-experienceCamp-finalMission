@@ -41,21 +41,40 @@
 .pagination {
   border-radius: 40px;
   background: var(--#{$prefix}body-bg);
-  padding: 8px 20px;
+  padding: 6px 15px;
   .page-item {
-    width: 40px;
+    width: 30px;
   }
   .page-link {
     width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
   .page-item.page-arrow {
-    width: 24px;
+    width: 18px;
     & .page-link {
-      font-size: 24px;
+      font-size: 18px;
       padding-top: 0;
       padding-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 376px) {
+  .pagination {
+    padding: 8px 20px;
+    .page-item {
+      width: 40px;
+    }
+    .page-link {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .page-item.page-arrow {
+      width: 24px;
+      & .page-link {
+        font-size: 24px;
+      }
     }
   }
 }
