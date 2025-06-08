@@ -5,6 +5,14 @@ export default defineConfig({
   publicDir: false,
   server: {
     // 啟動 server 時預設開啟的頁面
-    open: 'pages/index.html',
+    open: './index.html',
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        blog: 'pages/blog.html'
+      }
+    }
+  }
 });
